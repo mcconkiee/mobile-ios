@@ -16,6 +16,14 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		A182D029154C277700571276 /* SHKCustomFormControllerLargeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A182D028154C277700571276 /* SHKCustomFormControllerLargeTextField.m */; };
+		A182D041154D77A900571276 /* BatchPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A182D040154D77A900571276 /* BatchPhotoViewController.m */; };
+		A182D044154E2C6D00571276 /* batch_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A182D042154E2C6D00571276 /* batch_selected.png */; };
+		A182D045154E2C6D00571276 /* batch_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A182D043154E2C6D00571276 /* batch_selected@2x.png */; };
+		A1E6713E154EBBCD000DCA39 /* batch_offstate.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E6713A154EBBCD000DCA39 /* batch_offstate.png */; };
+		A1E6713F154EBBCD000DCA39 /* batch_offstate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E6713B154EBBCD000DCA39 /* batch_offstate@2x.png */; };
+		A1E67140154EBBCD000DCA39 /* batch_onstate.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E6713C154EBBCD000DCA39 /* batch_onstate.png */; };
+		A1E67141154EBBCD000DCA39 /* batch_onstate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E6713D154EBBCD000DCA39 /* batch_onstate@2x.png */; };
 		CD04BF2A15247C7900D844ED /* OpenPhotoServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD04BF2915247C7900D844ED /* OpenPhotoServiceTests.m */; };
 		CD0CA68B145C566B002246C2 /* OpenPhotoIASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0CA68A145C566B002246C2 /* OpenPhotoIASKAppSettingsViewController.m */; };
 		CD10EA3C1535D9AB007BCD54 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD10EA3B1535D9AB007BCD54 /* PhotoModel.m */; };
@@ -65,7 +73,6 @@
 		CD4DF4DD13F3C1F000A31234 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF4DC13F3C1F000A31234 /* Tag.m */; };
 		CD4DF4E013F3C2BD00A31234 /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4DF4DF13F3C2BD00A31234 /* TagViewController.m */; };
 		CD4E106F1512048A00718923 /* DefaultSHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E0F881512048A00718923 /* DefaultSHKConfigurator.m */; };
-		CD4E10701512048A00718923 /* LegacySHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E0F8A1512048A00718923 /* LegacySHKConfigurator.m */; };
 		CD4E10711512048A00718923 /* SHKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E0F8C1512048A00718923 /* SHKConfiguration.m */; };
 		CD4E10721512048A00718923 /* SHKOAuthSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E0F901512048A00718923 /* SHKOAuthSharer.m */; };
 		CD4E10731512048A00718923 /* SHKSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E0F921512048A00718923 /* SHKSharer.m */; };
@@ -476,6 +483,16 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A182D027154C277700571276 /* SHKCustomFormControllerLargeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKCustomFormControllerLargeTextField.h; sourceTree = "<group>"; };
+		A182D028154C277700571276 /* SHKCustomFormControllerLargeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKCustomFormControllerLargeTextField.m; sourceTree = "<group>"; };
+		A182D03F154D77A900571276 /* BatchPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatchPhotoViewController.h; sourceTree = "<group>"; };
+		A182D040154D77A900571276 /* BatchPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatchPhotoViewController.m; sourceTree = "<group>"; };
+		A182D042154E2C6D00571276 /* batch_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batch_selected.png; path = OpenPhoto/images/batch_selected.png; sourceTree = SOURCE_ROOT; };
+		A182D043154E2C6D00571276 /* batch_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "batch_selected@2x.png"; path = "OpenPhoto/images/batch_selected@2x.png"; sourceTree = SOURCE_ROOT; };
+		A1E6713A154EBBCD000DCA39 /* batch_offstate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batch_offstate.png; path = OpenPhoto/images/batch_offstate.png; sourceTree = SOURCE_ROOT; };
+		A1E6713B154EBBCD000DCA39 /* batch_offstate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "batch_offstate@2x.png"; path = "OpenPhoto/images/batch_offstate@2x.png"; sourceTree = SOURCE_ROOT; };
+		A1E6713C154EBBCD000DCA39 /* batch_onstate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batch_onstate.png; path = OpenPhoto/images/batch_onstate.png; sourceTree = SOURCE_ROOT; };
+		A1E6713D154EBBCD000DCA39 /* batch_onstate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "batch_onstate@2x.png"; path = "OpenPhoto/images/batch_onstate@2x.png"; sourceTree = SOURCE_ROOT; };
 		CD04BF2815247C7900D844ED /* OpenPhotoServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenPhotoServiceTests.h; sourceTree = "<group>"; };
 		CD04BF2915247C7900D844ED /* OpenPhotoServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenPhotoServiceTests.m; sourceTree = "<group>"; };
 		CD0CA689145C566B002246C2 /* OpenPhotoIASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenPhotoIASKAppSettingsViewController.h; sourceTree = "<group>"; };
@@ -644,7 +661,6 @@
 		CD4E10501512048A00718923 /* SHKiOS5Twitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKiOS5Twitter.m; sourceTree = "<group>"; };
 		CD4E10511512048A00718923 /* SHKTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKTwitter.h; sourceTree = "<group>"; };
 		CD4E10521512048A00718923 /* SHKTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTwitter.m; sourceTree = "<group>"; };
-		CD4E10581512048A00718923 /* SHKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKConfig.h; sourceTree = "<group>"; };
 		CD4E105A1512048A00718923 /* SHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKActionSheet.h; sourceTree = "<group>"; };
 		CD4E105B1512048A00718923 /* SHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKActionSheet.m; sourceTree = "<group>"; };
 		CD4E105C1512048A00718923 /* SHKActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKActivityIndicator.h; sourceTree = "<group>"; };
@@ -1105,7 +1121,6 @@
 				CD4E0FCD1512048A00718923 /* Customize UI */,
 				CD4E0FDB1512048A00718923 /* ShareKit.bundle */,
 				CD4E0FDC1512048A00718923 /* Sharers */,
-				CD4E10581512048A00718923 /* SHKConfig.h */,
 				CD4E10591512048A00718923 /* UI */,
 			);
 			name = ShareKit;
@@ -1240,6 +1255,8 @@
 		CD4E0FCD1512048A00718923 /* Customize UI */ = {
 			isa = PBXGroup;
 			children = (
+				A182D027154C277700571276 /* SHKCustomFormControllerLargeTextField.h */,
+				A182D028154C277700571276 /* SHKCustomFormControllerLargeTextField.m */,
 				CD4E0FCE1512048A00718923 /* SHKCustomActionSheet.h */,
 				CD4E0FCF1512048A00718923 /* SHKCustomActionSheet.m */,
 				CD4E0FD01512048A00718923 /* SHKCustomFormController.h */,
@@ -1719,6 +1736,12 @@
 		CDF1C97413E1C45C0018AD0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A1E6713A154EBBCD000DCA39 /* batch_offstate.png */,
+				A1E6713B154EBBCD000DCA39 /* batch_offstate@2x.png */,
+				A1E6713C154EBBCD000DCA39 /* batch_onstate.png */,
+				A1E6713D154EBBCD000DCA39 /* batch_onstate@2x.png */,
+				A182D042154E2C6D00571276 /* batch_selected.png */,
+				A182D043154E2C6D00571276 /* batch_selected@2x.png */,
 				CD70513E153099C50037E5BB /* OpenPhotobrownRoundedArrow.png */,
 				CD70513F153099C50037E5BB /* OpenPhotobrownRoundedArrow@2x.png */,
 				CD152DF71523B2A300001DDE /* upload-cancel.png */,
@@ -1806,6 +1829,8 @@
 				CD199BB81506FDA600BFC316 /* PhotoViewController.h */,
 				CD1F823813E337DD00C91729 /* PhotoViewController.m */,
 				CD1F823913E337DD00C91729 /* PhotoViewController.xib */,
+				A182D03F154D77A900571276 /* BatchPhotoViewController.h */,
+				A182D040154D77A900571276 /* BatchPhotoViewController.m */,
 			);
 			name = Photo;
 			sourceTree = "<group>";
@@ -2230,6 +2255,12 @@
 				CD90B81D152894BE00832AB4 /* home_private@2x.png in Resources */,
 				CD705140153099C50037E5BB /* OpenPhotobrownRoundedArrow.png in Resources */,
 				CD705141153099C50037E5BB /* OpenPhotobrownRoundedArrow@2x.png in Resources */,
+				A182D044154E2C6D00571276 /* batch_selected.png in Resources */,
+				A182D045154E2C6D00571276 /* batch_selected@2x.png in Resources */,
+				A1E6713E154EBBCD000DCA39 /* batch_offstate.png in Resources */,
+				A1E6713F154EBBCD000DCA39 /* batch_offstate@2x.png in Resources */,
+				A1E67140154EBBCD000DCA39 /* batch_onstate.png in Resources */,
+				A1E67141154EBBCD000DCA39 /* batch_onstate@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2333,7 +2364,6 @@
 				CDDCA45B150E092F00EE1DB0 /* OpenPhoto.xcdatamodeld in Sources */,
 				CDFFAD76150E40BA00B87229 /* PhotoModel+OpenPhoto.m in Sources */,
 				CD4E106F1512048A00718923 /* DefaultSHKConfigurator.m in Sources */,
-				CD4E10701512048A00718923 /* LegacySHKConfigurator.m in Sources */,
 				CD4E10711512048A00718923 /* SHKConfiguration.m in Sources */,
 				CD4E10721512048A00718923 /* SHKOAuthSharer.m in Sources */,
 				CD4E10731512048A00718923 /* SHKSharer.m in Sources */,
@@ -2417,6 +2447,8 @@
 				CD10EA3C1535D9AB007BCD54 /* PhotoModel.m in Sources */,
 				CD10EB08153719D7007BCD54 /* NewestPhotos.m in Sources */,
 				CD9060B9154589D0009EACB4 /* OpenPhotoAlertView.m in Sources */,
+				A182D029154C277700571276 /* SHKCustomFormControllerLargeTextField.m in Sources */,
+				A182D041154D77A900571276 /* BatchPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

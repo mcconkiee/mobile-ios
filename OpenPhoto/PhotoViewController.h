@@ -28,6 +28,7 @@
 @interface PhotoViewController : UIViewController  <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, AFFeatherDelegate>{
     
     IBOutlet UITextField *imageTitle;
+    IBOutlet UIButton *_commitButton;
     
     NSURL* urlImageOriginal;
     UIImage* imageOriginal;

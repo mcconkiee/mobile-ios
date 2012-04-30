@@ -26,9 +26,15 @@
 
 @class PhotoSet;
 
+
+
 @interface GalleryViewController : OpenPhotoTTThumbsViewController <WebServiceDelegate>{
     WebService* service;
     NSString *tagName;
+    
+
+    BOOL _batchProcess;
+    NSMutableArray *_batchPhotos;
 }
 
 @property (nonatomic, retain) WebService *service;

@@ -21,6 +21,8 @@
 
 @interface GalleryViewController()
 - (void) loadImages;
+-(void)_batch:(id)sender;
+-(void)_onEdit:(id)sender;
 @end
 
 @implementation GalleryViewController
@@ -78,15 +80,98 @@
     return self;
 }
 
+- (void)thumbsTableViewCell:(TTThumbsTableViewCell*)cell didSelectPhoto:(id<TTPhoto>)photo 
+{
+    if (_batchProcess) {
+        UIImageView *cmIview;
+        
+        int idx = [photo index]%4;//zero index of 4 possiblie image views
+        UIView *thumbView = [[[[cell subviews] objectAtIndex:0] subviews] objectAtIndex:idx];
+        
+        if ([_batchPhotos containsObject:photo]) {
+            [_batchPhotos removeObject:photo];
+            cmIview = (UIImageView*)[thumbView viewWithTag:100];
+            [cmIview removeFromSuperview];
+        }else {
+            [_batchPhotos addObject:photo];
+            UIImage *checkmark = [UIImage imageNamed:@"batch_selected.png"];
+            cmIview = [[UIImageView alloc] initWithImage:checkmark];
+            [cmIview setTag:100];
+            [thumbView addSubview:cmIview];
+            [cmIview release];
+        }
+        NSLog(@"_batchphotos: %@",_batchPhotos);
+    }else
+    {
+        if (_batchPhotos)[_batchPhotos removeAllObjects];
+        [super thumbsTableViewCell:cell didSelectPhoto:photo];
+    }
+    
+    
+}
+-(UIBarButtonItem*)refreshButton
+{
+    UIBarButtonItem *refreshButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+                                                                                    target:self 
+                                                                                    action:@selector(loadImages)] autorelease];              
+    return refreshButton;
+}
+
+
+-(UIBarButtonItem*)editButton:(BOOL)hasOnState;
+{
+    UIImage *editImage_state =nil;
+    if (hasOnState) {
+        editImage_state = [UIImage imageNamed:@"batch_onstate.png"];
+    }else {
+        editImage_state = [UIImage imageNamed:@"batch_offstate.png"];
+    }
+    UIButton *eButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [eButton setFrame:CGRectMake(0, 0, 30, 30)];
+    [eButton setImage:editImage_state forState:UIControlStateNormal];
+    [eButton addTarget:self action:@selector(_batch:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *editButton = [[[UIBarButtonItem alloc] initWithCustomView:eButton] autorelease];
+    return editButton;
+}
+
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadImages)];          
+    UIBarButtonItem *refreshButton = [self refreshButton];
     self.navigationItem.rightBarButtonItem = refreshButton;
-    [refreshButton release];
+    
+    UIBarButtonItem *batchButton = [self editButton:_batchProcess];
+    self.navigationItem.leftBarButtonItem = batchButton;
+
     
     [self loadImages];
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+-(void)_onEdit:(id)sender
+{
+//    BatchPhotoViewController *batchVC = [[BatchPhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
+//    [self.navigationController pushViewController:batchVC animated:YES];
+//    [batchVC release];
+}
+
+//toggle the batch state and ui
+-(void)_batch:(id)sender
+{
+    _batchProcess = !_batchProcess;      
+    if (_batchProcess) {
+        self.title = @"Batch Mode";
+        if (_batchPhotos!=nil) {
+            [_batchPhotos release];
+            _batchPhotos = nil;
+        }
+        _batchPhotos = [[NSMutableArray alloc] init];
+    }else {
+        self.title = @"Gallery";
+    }
+    UIBarButtonItem *leftbutton = [self editButton:_batchProcess];
+    self.navigationItem.leftBarButtonItem = leftbutton;
 }
 
 - (void) loadImages{
@@ -104,7 +189,8 @@
 {
     [super viewDidLoad];
     // set the tile of the table
-    self.title=@"Gallery";     
+    self.title=@"Gallery";
+    _batchProcess = NO;
 }
 
 // delegate
@@ -221,7 +307,9 @@
 }
 
 
+
 - (void) dealloc {
+    
     [self.service release];
     [self.tagName release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];

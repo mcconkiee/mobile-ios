@@ -63,4 +63,30 @@
     
 }
 
+// test upload form
+-(void) testBatchEditPhotos{
+    OpenPhotoService *service = [OpenPhotoServiceFactory createOpenPhotoService];
+    NSArray *photos = [service fetchNewestPhotosMaxResult:3];
+    if (![photos count] > 0){
+        STFail(@"We should have some newest photos");
+    }
+    
+    NSMutableArray *curPhotos = [NSMutableArray array];
+    for (int b=0; b<[photos count]; b++) {
+        NSMutableDictionary *photo = [NSMutableDictionary dictionaryWithDictionary:[photos objectAtIndex:b]];
+        [photo setValue:@"Test,Island,Etc" forKey:@"tags"];
+        [photo setValue:@"0" forKey:@"permission"];//test non public
+        [photo setValue:[NSString stringWithFormat:@"Test Photo %d",b]
+                 forKey:@"title"];
+        [curPhotos addObject:photo];
+    }
+
+    
+    NSArray *responses = [service batchEdit:curPhotos];
+    STAssertTrue([responses count]==3,@"should have 3 responses");
+    STAssertTrue([[[responses objectAtIndex:2]
+                   valueForKeyPath:@"result.title"]
+                  isEqualToString:@"Test Photo 2"],@"title should be 'Test Photo 2'");
+}
+
 @end
